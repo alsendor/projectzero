@@ -21,6 +21,7 @@ let maxPlayers = 8
 var count : Int?
 var currentKing = Int.random(in: 1..<count!)
 var players = [Player]() //Array of players in current session
+var usedMemes = [Meme]() // Array of memes that are used in current round
 
 class MessagesViewController: MSMessagesAppViewController {
     

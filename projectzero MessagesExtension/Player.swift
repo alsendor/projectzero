@@ -21,6 +21,7 @@ class Player {
         self.id = count!
         if (self.id == currentKing){
             self.king = true
+            usedMemes.removeAll() // Removes all memes from usedMemes to start new round
         }else{
             self.king = false
         }
@@ -40,11 +41,21 @@ class Player {
     }
     
     func choosePrompt() {
-        
+        if (self.king){
+            // Select prompt for the round
+        }
     }
     
     func chooseBestMeme() {
-        
+        if (self.king){
+            // Select which memes wins the round
+        }
+    }
+    
+    func chooseMeme() {
+        if (!self.king){
+            // Add chosen meme to usedMemes
+        }
     }
     
 }

@@ -22,4 +22,25 @@ class Player {
         self.id = 1 //will assign player ids later on
     }
     
+    func isKing() -> Bool {
+        return king
+    }
+    
+    func setKing() {
+        if king {
+            king = false
+        }
+        else {
+            king = true
+        }
+    }
+    
+    func choosePrompt() {
+        
+    }
+    
+    func chooseBestMeme() {
+        
+    }
+    
 }

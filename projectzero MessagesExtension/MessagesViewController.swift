@@ -9,6 +9,13 @@
 import UIKit
 import Messages
 
+enum state: Int {
+    case home = 1
+    case kingsTurn = 2
+    case jokersTurn = 3
+    case end = 4
+}
+
 //Global variables for game
 let maxPlayers = 8
 var count : Int?

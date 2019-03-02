@@ -11,8 +11,8 @@ import Messages
 
 //Global variables for game
 let maxPlayers = 8
-var currentKing : Int?
 var count : Int?
+var currentKing = Int.random(in: 1..<count!)
 var players = [Player]() //Array of players in current session
 
 class MessagesViewController: MSMessagesAppViewController {

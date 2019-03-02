@@ -15,7 +15,6 @@
 		F65A543A222A4AB800437004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65A5439222A4AB800437004 /* Assets.xcassets */; };
 		F65A5446222A583A00437004 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A5445222A583A00437004 /* Player.swift */; };
 		F65A5448222A630D00437004 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A5447222A630D00437004 /* Meme.swift */; };
-		F65A544A222A6B6700437004 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A5449222A6B6700437004 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		F65A543B222A4AB800437004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F65A5445222A583A00437004 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F65A5447222A630D00437004 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
-		F65A5449222A6B6700437004 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 				F65A543B222A4AB800437004 /* Info.plist */,
 				F65A5445222A583A00437004 /* Player.swift */,
 				F65A5447222A630D00437004 /* Meme.swift */,
-				F65A5449222A6B6700437004 /* Game.swift */,
 			);
 			path = "projectzero MessagesExtension";
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				F65A5448222A630D00437004 /* Meme.swift in Sources */,
 				F65A5446222A583A00437004 /* Player.swift in Sources */,
 				F65A5435222A4AB700437004 /* MessagesViewController.swift in Sources */,
-				F65A544A222A6B6700437004 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

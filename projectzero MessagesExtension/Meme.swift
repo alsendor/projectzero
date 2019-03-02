@@ -26,7 +26,7 @@ class Prompt {
     func setUsed() {
         used = true
     }
-    
+        
 }
 
 class Meme {

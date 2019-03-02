@@ -19,8 +19,11 @@ class Player {
         self.name = playerName
         self.score = 0
         self.id = count!
-        self.king = false
-        
+        if (self.id == currentKing){
+            self.king = true
+        }else{
+            self.king = false
+        }
     }
     
     func isKing() -> Bool {

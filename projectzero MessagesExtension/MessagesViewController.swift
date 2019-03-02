@@ -9,9 +9,10 @@
 import UIKit
 import Messages
 
-//Global variables
-var currentKing : Int
-var count : Int
+//Global variables for game
+let maxPlayers = 8
+var currentKing : Int?
+var count : Int?
 var players = [Player]() //Array of players in current session
 
 class MessagesViewController: MSMessagesAppViewController {

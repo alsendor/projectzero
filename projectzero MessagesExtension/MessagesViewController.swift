@@ -9,6 +9,11 @@
 import UIKit
 import Messages
 
+//Global variables
+var currentKing : Int
+var count : Int
+var players = [Player]() //Array of players in current session
+
 class MessagesViewController: MSMessagesAppViewController {
     
     override func viewDidLoad() {
@@ -65,4 +70,3 @@ class MessagesViewController: MSMessagesAppViewController {
     }
 
 }
-

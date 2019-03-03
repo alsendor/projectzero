@@ -40,21 +40,21 @@ class Player {
         }
     }
     
-    func choosePrompt() {
+    func choosePrompt(chosenPrompt: Prompt) {
         if (self.king){
-            // Select prompt for the round
+            chosenPrompt.setUsed()
         }
     }
     
-    func chooseBestMeme() {
+    func chooseBestMeme(chosenMeme: Meme) {
         if (self.king){
-            // Select which memes wins the round
+            chosenMeme.setWinner()
         }
     }
     
-    func chooseMeme() {
+    func chooseMeme(chosenMeme: Meme) {
         if (!self.king){
-            // Add chosen meme to usedMemes
+            usedMemes.append(chosenMeme)
         }
     }
     

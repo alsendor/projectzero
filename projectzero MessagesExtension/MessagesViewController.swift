@@ -86,11 +86,16 @@ class MessagesViewController: MSMessagesAppViewController {
     
     @IBAction func startGameButton(_ sender: UIButton) {
         //print("Expanding view")
+        let myImage = UIImage(named: "goodBurgeAww")
         guard let conversation = self.activeConversation else { fatalError("Expected a conversation")}
         let session = MSSession()
         let layout = MSMessageTemplateLayout()
         //layout.image = Play
+        layout.image = myImage;
+        layout.imageTitle = "The Zero Meme Bitch"
+        layout.imageSubtitle = "Subtittle Boy"
         layout.caption = "Lets Play This Shit"
+        
         let message = MSMessage(session: session)
         message.layout = layout
         message.summaryText = "Sent Message"

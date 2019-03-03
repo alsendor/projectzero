@@ -86,7 +86,16 @@ class MessagesViewController: MSMessagesAppViewController {
     
     @IBAction func startGameButton(_ sender: UIButton) {
         print("Expanding view")
-        requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
+        guard let conversation = self.activeConversation else { fatalError("Expected a conversation")}
+        let session = MSSession()
+        let layout = MSMessageTemplateLayout()
+        //layout.image = Play
+        layout.caption = "Lets Play This Shit"
+        let message = MSMessage(session: session)
+        message.layout = layout
+        message.summaryText = "Sent Message"
+        conversation.insert(message)
+        //requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
     }
     
     @IBAction func readyButton(_ sender: UIButton) {

@@ -84,12 +84,19 @@ class MessagesViewController: MSMessagesAppViewController {
         print("Successfully transitioned to style ", presentationStyle.rawValue)
     }
     
-    @IBAction func makeMemeButton(_ sender: UIButton, forEvent event: UIEvent) {
-        //print("Opening Meme Menu")
-        handleImage.shared.showActionSheet(vc: self)
-//        handleImage.shared.imageBlock = {
-//            handleImage.showActionSheet()
-//            
-//        }
+    @IBAction func startGameButton(_ sender: UIButton) {
+        print("Expanding view")
+        requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
     }
+    
+    @IBAction func readyButton(_ sender: UIButton) {
+    print("Readying up")
+    //        print("Opening Meme Menu")
+            handleImage.shared.showActionSheet(vc: self)
+    ////        handleImage.shared.imageBlock = {
+    ////            handleImage.showActionSheet()
+    ////
+    ////        }
+    }
+
 }

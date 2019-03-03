@@ -40,6 +40,8 @@
                                 </state>
                                 <connections>
                                     <action selector="makeMemeButton:forEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="wN9-Yq-q7y"/>
+                                    <action selector="startGameButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="YMh-yH-iyH"/>
+                                    <segue destination="ObA-dk-sSI" kind="show" id="fwW-b2-swQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlX-bI-ktV">
@@ -118,7 +120,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="makeMemeButton:forEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="d7S-6V-ykW"/>
+                                    <action selector="readyButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="tKh-pA-sya"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3A-PM-uvG">

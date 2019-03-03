@@ -10,6 +10,7 @@ import Foundation
 
 class Prompt {
     
+    var promptID: Int?
     var prompt: String
     var used: Bool
     var promptList = [Prompt]()
@@ -32,13 +33,16 @@ class Prompt {
 
 class Meme {
     
+    var memeID: Int?
     var memeText: String
     var used: Bool
+    var winner: Bool
     var memeList = [Meme]()
     
     init() {
         memeText = ""
         used = false
+        winner = false
     }
     
     func getMemes() -> [Meme] {
@@ -51,5 +55,9 @@ class Meme {
     
     func setUsed() {
         used = true
+    }
+    
+    func setWinner() {
+        winner = true
     }
 }

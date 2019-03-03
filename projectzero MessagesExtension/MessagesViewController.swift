@@ -137,7 +137,7 @@ class MessagesViewController: MSMessagesAppViewController, UIPickerViewDelegate,
         layout.image = myImage;
         layout.imageTitle = "What the Meme"
         layout.imageSubtitle = "Today's Meme"
-        layout.caption = "Lets Play This Shit"
+        layout.caption = "Lets Get This Bread"
         
         let message = MSMessage(session: session)
         message.layout = layout

@@ -49,7 +49,7 @@
                                 <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Ready">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Start Game">
+                                        <fragment content="MEME ME">
                                             <attributes>
                                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="24" name="ArialRoundedMTBold"/>
@@ -61,7 +61,6 @@
                                 <connections>
                                     <action selector="makeMemeButton:forEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="wN9-Yq-q7y"/>
                                     <action selector="startGameButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="YMh-yH-iyH"/>
-                                    <segue destination="ObA-dk-sSI" kind="show" id="bFm-vZ-fO8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlX-bI-ktV">

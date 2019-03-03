@@ -38,7 +38,7 @@
                                 <connections>
                                     <action selector="loadImageButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="Kzc-FQ-YBI"/>
                                     <action selector="makeMemeButton:forEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Ej9-50-qnC"/>
-                                    <action selector="startGameButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="ZPk-ab-7MG"/>
+                                    <segue destination="3b0-gk-t24" kind="show" id="ADW-70-d99"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red Top" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-vZ-uzO">
@@ -612,7 +612,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="You Are King">
                                         <attributes>
-                                            <color key="NSColor" red="0.91497461930000001" green="0.90398711279999999" blue="0.1030328217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" red="0.9149746192893401" green="0.90398711275346155" blue="0.10303282169364704" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="36" name="MarkerFelt-Wide"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -673,7 +673,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Choose Best Meme">
                                         <attributes>
-                                            <color key="NSColor" red="0.91497461930000001" green="0.90398711279999999" blue="0.1030328217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" red="0.9149746192893401" green="0.90398711275346155" blue="0.10303282169364704" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="36" name="MarkerFelt-Wide"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -691,6 +691,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xn-kP-cC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2404" y="-591.45427286356824"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MEA-7W-2Bw">
+            <objects>
+                <viewController id="3b0-gk-t24" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r3l-0x-Toc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXT-8x-TLo">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aph-Hp-Crr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yox-GH-7rW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="694"/>
         </scene>
     </scenes>
     <resources>

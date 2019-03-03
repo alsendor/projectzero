@@ -30,7 +30,7 @@ class MessagesViewController: MSMessagesAppViewController, UIPickerViewDelegate,
     
     // Setting view picker
     var imgPicker: UIPickerView = UIPickerView()
-    var setofImages = ["elmoWorldBurn", "spongeFishFam", "spongeFishDrinking", "planktonPlanning", "guyBlinkingMeme", "goodBurgeAww", "jimmyNeutronHamster", "bolbySlapSlapClapClap", "spongeFishEating", "kermitCry", "spongeFishSlurp", "patrickShook", "patrickLookingDown", "elmoShocked", "spidermanCarefullyHero", "squidwardWoke", "sixNineStoopid", "souljaBoyDrake", "bbqBeckyWhiteLady", "rollSafeThinkAboutIt", "pikachuSurprised", "spongeBobTired", "spongeBobMocking", "neilDeGrasseTyson", "elonMuskJoint", "gordonRamsayShocked"]
+    var setofImages = ["bbqBeckyWhiteLady.jpg", "beGoneThot.jpg","bolbySlapSlapClapClap.jpg", "closedFist.png", "crying.jpg", "dudeCryingSadness.jpg", "elmoShocked.png", "elmoWorldBurn.jpg", "elonMuskJoint.jpg", "fry.jpg", "gatsbyCheers.jpg", "goodBurgeAww.jpeg", "gordonRamsayShocked.jpg", "guyBlinkingMeme.jpg", "jimmyNeutronHamster.jpg", "JRSquint.jpeg", "kermitCry.jpg", "kermitTea.jpg", "mileyMeme.jpg", "monkeyShocked.jpg","neilDeGrasseTyson.jpg", "noseFaceScream.jpg", "pain.jpg", "pathetic.jpeg", "patrickLookingDown.jpg", "patrickShook.jpg", "pikachuSurprised.jpg", "pupilExpansion.jpg", "rollSafeThinkAboutIt.jpg", "sixNineStoopid.png", "so scare.jpg", "souljaBoyDrake.jpg", "spidermanCarefullyHero.jpg", "spongebobblyDoo.jpg", "spongebobClassShock.jpg", "spongebobLoveCry.jpg", "spongeBobMocking.jpg", "spongeBobTired.png", "spongebobUgly.png", "spongeFishEating.jpeg", "spongeFishSlurp.jpg", "squidwardWoke.jpeg", "squidwardWTF.jpg", "squidwardYallHearSum.jpg", "troll.jpg", "twoButtons.jpg", "wack.png",]
     
     
     
@@ -134,7 +134,7 @@ class MessagesViewController: MSMessagesAppViewController, UIPickerViewDelegate,
         layout.image = myImage;
         layout.imageTitle = "The Zero Meme Bitch"
         layout.imageSubtitle = "Sub Titties"
-        layout.caption = "Lets Play This Shit"
+        layout.caption = "Lets Play This Shit <3"
         
         let message = MSMessage(session: session)
         message.layout = layout

@@ -31,4 +31,19 @@ class Prompt {
 
 class Meme {
     
+    var memeText: String
+    var used: Bool
+    
+    init() {
+        memeText = ""
+        used = false
+    }
+    
+    func setMessage(input: String){
+        memeText = input
+    }
+    
+    func setUsed() {
+        used = true
+    }
 }

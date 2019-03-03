@@ -38,7 +38,7 @@
                                 <connections>
                                     <action selector="loadImageButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="Kzc-FQ-YBI"/>
                                     <action selector="makeMemeButton:forEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Ej9-50-qnC"/>
-                                    <action selector="startGameButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="ZPk-ab-7MG"/>
+                                    <segue destination="V7o-Ek-4kg" kind="show" id="gyB-al-sV7"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red Top" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-vZ-uzO">
@@ -500,22 +500,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="1n3-tx-ox9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xix-Xs-3mT">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q72-GW-11D">
                                 <rect key="frame" x="0.0" y="225" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q72-GW-11D" firstAttribute="width" secondItem="p4p-tj-JuL" secondAttribute="width" id="IBG-9E-7Cc"/>
+                            <constraint firstItem="q72-GW-11D" firstAttribute="centerY" secondItem="BUW-Ky-W1j" secondAttribute="centerY" id="RM4-ob-uEK"/>
+                            <constraint firstItem="q72-GW-11D" firstAttribute="centerX" secondItem="BUW-Ky-W1j" secondAttribute="centerX" id="ft3-xJ-tNw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BUW-Ky-W1j"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsL-g3-JYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="539"/>
+            <point key="canvasLocation" x="124" y="538.38080959520244"/>
         </scene>
     </scenes>
     <resources>

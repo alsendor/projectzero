@@ -95,8 +95,7 @@ class MessagesViewController: MSMessagesAppViewController {
         message.layout = layout
         message.summaryText = "Sent Message"
         conversation.insert(message)
-        
-        //requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
+        requestPresentationStyle(MSMessagesAppPresentationStyle.compact)
     }
     
     @IBAction func readyButton(_ sender: UIButton) {

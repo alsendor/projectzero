@@ -80,7 +80,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="85D-L4-ZBu" secondAttribute="trailing" constant="60" id="8Gc-cI-qef"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="d6U-vN-73c" secondAttribute="bottom" constant="20" id="Ao1-qJ-jYa"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="d6U-vN-73c" secondAttribute="bottom" constant="20" id="A5J-R0-VdZ"/>
                             <constraint firstItem="85D-L4-ZBu" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="60" id="D11-hu-koN"/>
                             <constraint firstItem="85D-L4-ZBu" firstAttribute="centerX" secondItem="UPG-Qi-CYf" secondAttribute="centerX" id="ELf-qV-QUS"/>
                             <constraint firstItem="d6U-vN-73c" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="20" id="Itw-zn-UTq"/>

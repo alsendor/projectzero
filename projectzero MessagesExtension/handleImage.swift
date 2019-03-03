@@ -1,5 +1,5 @@
 //
-//  hangleImage.swift
+//  handleImage.swift
 //  projectzero MessagesExtension
 //
 //  Created by Mario Ortega on 3/2/19.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class handleImage: NSObject {
-    static let common = handleImage()
+    static let shared = handleImage()
     
     fileprivate var currentVC: UIViewController!
     
@@ -29,6 +29,7 @@ class handleImage: NSObject {
     
     // Load Image from the library
     func loadFromLibrary() {
+        print("Loading image from Library")
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let libraryController = UIImagePickerController()
             libraryController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate);
@@ -38,6 +39,7 @@ class handleImage: NSObject {
     }
     
     func showActionSheet(vc: UIViewController) {
+        print("Asking for Camera or Library")
         currentVC = vc
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(
@@ -64,10 +66,12 @@ class handleImage: NSObject {
 
 extension handleImage: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("Canceled Image Pick")
         currentVC.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("Finished Media")
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.imageBlock?(image)
         }else{

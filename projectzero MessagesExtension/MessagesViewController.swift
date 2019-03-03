@@ -85,11 +85,11 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     @IBAction func makeMemeButton(_ sender: UIButton, forEvent event: UIEvent) {
-        print("Opening Meme Menu")
-    }
-    
-    
-    func loadCompactView() {
-        //makeMemeButton(<#T##sender: UIButton##UIButton#>, forEvent: <#T##UIEvent#>)
+        //print("Opening Meme Menu")
+        handleImage.shared.showActionSheet(vc: self)
+//        handleImage.shared.imageBlock = {
+//            handleImage.showActionSheet()
+//            
+//        }
     }
 }

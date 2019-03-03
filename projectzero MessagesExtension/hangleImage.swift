@@ -21,7 +21,7 @@ class handleImage: NSObject {
     func loadCamera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraController = UIImagePickerController()
-            cameraController.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate);
+            cameraController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate);
             cameraController.sourceType = .camera
             currentVC.present(cameraController, animated: true, completion: nil)
         }
@@ -31,7 +31,7 @@ class handleImage: NSObject {
     func loadFromLibrary() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let libraryController = UIImagePickerController()
-            libraryController.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate);
+            libraryController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate);
             libraryController.sourceType = .photoLibrary
             currentVC.present(libraryController, animated: true, completion: nil)
         }
@@ -40,12 +40,40 @@ class handleImage: NSObject {
     func showActionSheet(vc: UIViewController) {
         currentVC = vc
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(
-            UIAlertAction(title: "Camera", style: .default, handler: {
+        actionSheet.addAction(UIAlertAction(
+            title: "Camera", style: .default, handler: {
                 (alert:UIAlertAction!) -> Void in self.loadCamera()
-            })
-        )
+            }
+        ))
+        
+        actionSheet.addAction(UIAlertAction(
+            title: "Gallery", style: .default, handler: {
+                (alert:UIAlertAction!) -> Void in self.loadFromLibrary()
+            }
+        ))
+        
+        actionSheet.addAction(UIAlertAction(
+            title: "Cancel", style: .cancel, handler: nil
+        ))
+        
+        vc.present(actionSheet, animated: true, completion: nil)
     }
     
+}
+
+
+extension handleImage: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        currentVC.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.imageBlock?(image)
+        }else{
+            print("Something went wrong")
+        }
+        currentVC.dismiss(animated: true, completion: nil)
+    }
     
 }

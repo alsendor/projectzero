@@ -12,15 +12,16 @@ class Prompt {
     
     var prompt: String
     var used: Bool
-    var memeList = [Meme]()
+    var promptList = [Prompt]()
+
     
     init() {
         prompt = " "
         used = false
     }
     
-    func getMemes() -> [Meme] {
-        return memeList
+    func getPrompts() -> [Prompt] {
+        return promptList
     }
     
     func setUsed() {
@@ -31,4 +32,24 @@ class Prompt {
 
 class Meme {
     
+    var memeText: String
+    var used: Bool
+    var memeList = [Meme]()
+    
+    init() {
+        memeText = ""
+        used = false
+    }
+    
+    func getMemes() -> [Meme] {
+        return memeList
+    }
+    
+    func setMessage(input: String){
+        memeText = input
+    }
+    
+    func setUsed() {
+        used = true
+    }
 }

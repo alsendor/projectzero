@@ -85,7 +85,7 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     @IBAction func startGameButton(_ sender: UIButton) {
-        print("Expanding view")
+        //print("Expanding view")
         guard let conversation = self.activeConversation else { fatalError("Expected a conversation")}
         let session = MSSession()
         let layout = MSMessageTemplateLayout()
@@ -95,17 +95,29 @@ class MessagesViewController: MSMessagesAppViewController {
         message.layout = layout
         message.summaryText = "Sent Message"
         conversation.insert(message)
+        
         //requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
     }
     
     @IBAction func readyButton(_ sender: UIButton) {
     print("Readying up")
     //        print("Opening Meme Menu")
-            handleImage.shared.showActionSheet(vc: self)
-    ////        handleImage.shared.imageBlock = {
-    ////            handleImage.showActionSheet()
-    ////
-    ////        }
+   
     }
+    
+    @IBAction func loadImageButton(_ sender: Any) {
+        print("Expanding Presentation Style")
+        requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
+        handleImage.shared.showActionSheet(vc: self)
+        ////        handleImage.shared.chosenImage = {
+        ////            handleImage.showActionSheet()
+        ////
+        ////        }
+    }
+    
+    
+    
+    
+    
 
 }

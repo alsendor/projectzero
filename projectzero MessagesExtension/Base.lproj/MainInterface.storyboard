@@ -21,6 +21,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="JaK-gG-XUR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2Y-aZ-w2z">
+                                <rect key="frame" x="20" y="547" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Ready">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Load Image">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="ArialRoundedMTBold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="loadImageButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="Kzc-FQ-YBI"/>
+                                    <action selector="makeMemeButton:forEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Ej9-50-qnC"/>
+                                    <action selector="startGameButton:" destination="jrW-cP-q65" eventType="touchUpInside" id="ZPk-ab-7MG"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red Top" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-vZ-uzO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                             </imageView>
@@ -64,12 +84,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JaK-gG-XUR" firstAttribute="top" secondItem="Vnb-vZ-uzO" secondAttribute="top" id="1fO-YU-aaf"/>
+                            <constraint firstItem="CNg-90-ScN" firstAttribute="top" secondItem="g2Y-aZ-w2z" secondAttribute="bottom" constant="20" id="40a-Ms-JE6"/>
                             <constraint firstItem="wdv-KF-J0w" firstAttribute="bottom" secondItem="CNg-90-ScN" secondAttribute="bottom" constant="20" id="4Rs-Bm-C9O"/>
                             <constraint firstItem="Vnb-vZ-uzO" firstAttribute="trailing" secondItem="JaK-gG-XUR" secondAttribute="trailing" id="AWX-dr-IwQ"/>
                             <constraint firstItem="JaK-gG-XUR" firstAttribute="top" secondItem="2gW-hJ-xCd" secondAttribute="top" id="Bxz-ph-FL3"/>
                             <constraint firstItem="wdv-KF-J0w" firstAttribute="trailing" secondItem="CNg-90-ScN" secondAttribute="trailing" constant="20" id="Ja5-7q-LMS"/>
+                            <constraint firstItem="wdv-KF-J0w" firstAttribute="trailing" secondItem="g2Y-aZ-w2z" secondAttribute="trailing" constant="20" id="Mue-bx-iRG"/>
                             <constraint firstItem="wlX-bI-ktV" firstAttribute="leading" secondItem="wdv-KF-J0w" secondAttribute="leading" constant="64" id="Mui-57-aCB"/>
                             <constraint firstItem="wlX-bI-ktV" firstAttribute="top" secondItem="2gW-hJ-xCd" secondAttribute="topMargin" constant="-16" id="Oa6-K6-V1H"/>
+                            <constraint firstItem="g2Y-aZ-w2z" firstAttribute="leading" secondItem="wdv-KF-J0w" secondAttribute="leading" constant="20" id="VcF-Jf-Fh1"/>
                             <constraint firstItem="JaK-gG-XUR" firstAttribute="bottom" secondItem="wdv-KF-J0w" secondAttribute="bottom" id="Y3O-Kf-aFs"/>
                             <constraint firstItem="Vnb-vZ-uzO" firstAttribute="centerY" secondItem="wlX-bI-ktV" secondAttribute="centerY" id="ZQD-XS-b7G"/>
                             <constraint firstItem="Vnb-vZ-uzO" firstAttribute="centerX" secondItem="wlX-bI-ktV" secondAttribute="centerX" id="c9W-3b-Yj0"/>

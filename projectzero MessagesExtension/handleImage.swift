@@ -15,11 +15,12 @@ class handleImage: NSObject {
     fileprivate var currentVC: UIViewController!
     
     // MARK:
-    var imageBlock: ((UIImage) -> Void)?
+    var chosenImage: ((UIImage) -> Void)?
     
     // Load Camera to take Picture
     func loadCamera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            print("Trying to load Camera")
             let cameraController = UIImagePickerController()
             cameraController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate);
             cameraController.sourceType = .camera
@@ -73,7 +74,7 @@ extension handleImage: UIImagePickerControllerDelegate, UINavigationControllerDe
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print("Finished Media")
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            self.imageBlock?(image)
+            self.chosenImage?(image)
         }else{
             print("Something went wrong")
         }

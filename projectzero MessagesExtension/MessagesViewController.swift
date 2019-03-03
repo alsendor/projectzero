@@ -23,12 +23,52 @@ var currentKing = Int.random(in: 1..<count!)
 var players = [Player]() //Array of players in current session
 var usedMemes = [Meme]() // Array of memes that are used in current round
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
+    
+    
+    // Setting view picker
+    var imgPicker: UIPickerView = UIPickerView()
+    var setofImages = ["elmoWorldBurn", "spongeFishFam", "spongeFishDrinking", "planktonPlanning", "guyBlinkingMeme", "goodBurgeAww", "jimmyNeutronHamster", "bolbySlapSlapClapClap", "spongeFishEating", "kermitCry", "spongeFishSlurp", "patrickShook", "patrickLookingDown", "elmoShocked", "spidermanCarefullyHero", "squidwardWoke", "sixNineStoopid", "souljaBoyDrake", "bbqBeckyWhiteLady", "rollSafeThinkAboutIt", "pikachuSurprised", "spongeBobTired", "spongeBobMocking", "neilDeGrasseTyson", "elonMuskJoint", "gordonRamsayShocked"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("After Loading")
+    }
+    
+    @objc func addIntroPicker() {
+    
+        imgPicker.delegate = self
+        imgPicker.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        self.view.addSubview(imgPicker)
+        imgPicker.backgroundColor = UIColor.clear
+    }
+    
+    // MARK: ----- Handle Picker views
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return setofImages.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let myLabelView =  UILabel()
+        
+        myLabelView.text = setofImages[row]
+        print(setofImages[row])
+        myLabelView.adjustsFontSizeToFitWidth = true
+        myLabelView.font = UIFont(name: "Arial", size: 20)
+        myLabelView.textAlignment = .center
+        
+        
+        
+        return myLabelView
     }
     
     // MARK: - Conversation Handling
@@ -86,14 +126,14 @@ class MessagesViewController: MSMessagesAppViewController {
     
     @IBAction func startGameButton(_ sender: UIButton) {
         //print("Expanding view")
-        let myImage = UIImage(named: "goodBurgeAww")
+        let myImage = UIImage(named: "patrickShook")
         guard let conversation = self.activeConversation else { fatalError("Expected a conversation")}
         let session = MSSession()
         let layout = MSMessageTemplateLayout()
         //layout.image = Play
         layout.image = myImage;
         layout.imageTitle = "The Zero Meme Bitch"
-        layout.imageSubtitle = "Subtittle Boy"
+        layout.imageSubtitle = "Sub Titties"
         layout.caption = "Lets Play This Shit"
         
         let message = MSMessage(session: session)
@@ -112,7 +152,10 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBAction func loadImageButton(_ sender: Any) {
         print("Expanding Presentation Style")
         requestPresentationStyle(MSMessagesAppPresentationStyle.expanded)
-        handleImage.shared.showActionSheet(vc: self)
+        
+        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.addIntroPicker), userInfo: nil, repeats: false)
+        
+        //handleImage.shared.showActionSheet(vc: self)
         ////        handleImage.shared.chosenImage = {
         ////            handleImage.showActionSheet()
         ////

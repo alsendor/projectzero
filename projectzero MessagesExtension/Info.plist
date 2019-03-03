@@ -22,12 +22,12 @@
 	<string>1</string>
 	<key>NSExtension</key>
 	<dict>
+		<key>NSCameraUsageDescription</key>
+		<string>$(PRODUCT_NAME) camera use</string>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.message-payload-provider</string>
-		<key>NSCameraUsageDescription</key>
-		<string>$(PRODUCT_NAME) camera use</string>
 		<key>NSPhotoLibraryUsageDescription</key>
 		<string>Uses NSPhotoLibraryUsageDescription to allow you to make dank ass memes </string>
 	</dict>

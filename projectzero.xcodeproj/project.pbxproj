@@ -7,7 +7,7 @@
     objects = {
 
 /* Begin PBXBuildFile section */
-        A88E634E222B329B00C85CCB /* hangleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E634D222B329B00C85CCB /* hangleImage.swift */; };
+		A88E634E222B329B00C85CCB /* handleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E634D222B329B00C85CCB /* handleImage.swift */; };
         F65A5426222A4AB700437004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65A5425222A4AB700437004 /* Assets.xcassets */; };
         F65A542D222A4AB700437004 /* projectzero MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F65A542C222A4AB700437004 /* projectzero MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
         F65A5432222A4AB700437004 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65A5431222A4AB700437004 /* Messages.framework */; };
@@ -44,7 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-        A88E634D222B329B00C85CCB /* hangleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hangleImage.swift; sourceTree = "<group>"; };
+		A88E634D222B329B00C85CCB /* handleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handleImage.swift; sourceTree = "<group>"; };
+		A88E634F222B66AF00C85CCB /* projectzero MessagesExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "projectzero MessagesExtension.entitlements"; sourceTree = "<group>"; };
         F65A5422222A4AB600437004 /* projectzero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectzero.app; sourceTree = BUILT_PRODUCTS_DIR; };
         F65A5425222A4AB700437004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
         F65A5427222A4AB700437004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,13 +111,14 @@
         F65A5433222A4AB700437004 /* projectzero MessagesExtension */ = {
             isa = PBXGroup;
             children = (
+                A88E634F222B66AF00C85CCB /* projectzero MessagesExtension.entitlements */,
                 F65A5434222A4AB700437004 /* MessagesViewController.swift */,
                 F65A5436222A4AB700437004 /* MainInterface.storyboard */,
                 F65A5439222A4AB800437004 /* Assets.xcassets */,
                 F65A543B222A4AB800437004 /* Info.plist */,
                 F65A5445222A583A00437004 /* Player.swift */,
                 F65A5447222A630D00437004 /* Meme.swift */,
-                A88E634D222B329B00C85CCB /* hangleImage.swift */,
+				A88E634D222B329B00C85CCB /* handleImage.swift */,
                 F65A544B222A7B9100437004 /* GameViewController.swift */,
             );
             path = "projectzero MessagesExtension";
@@ -174,6 +176,11 @@
                     };
                     F65A542B222A4AB700437004 = {
                         CreatedOnToolsVersion = 10.1;
+                        SystemCapabilities = {
+                            com.apple.DataProtection = {
+                                enabled = 0;
+                            };
+                        };
                     };
                 };
             };
@@ -225,7 +232,7 @@
                 F65A5448222A630D00437004 /* Meme.swift in Sources */,
                 F65A5446222A583A00437004 /* Player.swift in Sources */,
                 F65A5435222A4AB700437004 /* MessagesViewController.swift in Sources */,
-                A88E634E222B329B00C85CCB /* hangleImage.swift in Sources */,
+				A88E634E222B329B00C85CCB /* handleImage.swift in Sources */,
             );
             runOnlyForDeploymentPostprocessing = 0;
         };
@@ -372,14 +379,14 @@
             buildSettings = {
                 ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
                 CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRLS8C44KS;
+                DEVELOPMENT_TEAM = AF9KFNK7SL;
                 INFOPLIST_FILE = "projectzero MessagesExtension/Info.plist";
                 LD_RUNPATH_SEARCH_PATHS = (
                     "$(inherited)",
                     "@executable_path/Frameworks",
                     "@executable_path/../../Frameworks",
                 );
-				PRODUCT_BUNDLE_IDENTIFIER = itslit.projectzero.MessagesExtension;
+                PRODUCT_BUNDLE_IDENTIFIER = mario.projectzero.MessagesExtension;
                 PRODUCT_NAME = "$(TARGET_NAME)";
                 SKIP_INSTALL = YES;
                 SWIFT_VERSION = 4.2;
@@ -392,14 +399,14 @@
             buildSettings = {
                 ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
                 CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRLS8C44KS;
+                DEVELOPMENT_TEAM = AF9KFNK7SL;
                 INFOPLIST_FILE = "projectzero MessagesExtension/Info.plist";
                 LD_RUNPATH_SEARCH_PATHS = (
                     "$(inherited)",
                     "@executable_path/Frameworks",
                     "@executable_path/../../Frameworks",
                 );
-				PRODUCT_BUNDLE_IDENTIFIER = itslit.projectzero.MessagesExtension;
+                PRODUCT_BUNDLE_IDENTIFIER = mario.projectzero.MessagesExtension;
                 PRODUCT_NAME = "$(TARGET_NAME)";
                 SKIP_INSTALL = YES;
                 SWIFT_VERSION = 4.2;
@@ -413,9 +420,9 @@
                 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
                 ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
                 CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRLS8C44KS;
+                DEVELOPMENT_TEAM = AF9KFNK7SL;
                 INFOPLIST_FILE = projectzero/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = itslit.projectzero;
+                PRODUCT_BUNDLE_IDENTIFIER = mario.projectzero;
                 PRODUCT_NAME = "$(TARGET_NAME)";
                 SWIFT_VERSION = 4.2;
                 TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,9 +435,9 @@
                 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
                 ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
                 CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRLS8C44KS;
+                DEVELOPMENT_TEAM = AF9KFNK7SL;
                 INFOPLIST_FILE = projectzero/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = itslit.projectzero;
+                PRODUCT_BUNDLE_IDENTIFIER = mario.projectzero;
                 PRODUCT_NAME = "$(TARGET_NAME)";
                 SWIFT_VERSION = 4.2;
                 TARGETED_DEVICE_FAMILY = "1,2";
